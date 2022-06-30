@@ -129,7 +129,7 @@ int play2(int board[9][9], int MaybeNumBoard[9][9], Sudoku S) {
 	while (play2(board, MaybeNumBoard, S) == 0) {
 		if (S.CheckFinsh(board)) return 1;
 		if (S.node.empty() == true) {
-			cout << "´íÎó";
+			cout << "é”™è¯¯";
 			return 0;
 		}
 		while (S.node.top().num == 0) {
@@ -137,7 +137,7 @@ int play2(int board[9][9], int MaybeNumBoard[9][9], Sudoku S) {
 			board[d->line][d->row] = 0;
 			S.node.pop();
 			if (S.node.empty() == true) {
-				cout << "´íÎó";
+				cout << "é”™è¯¯";
 				return 0;
 			}
 		}
@@ -161,7 +161,7 @@ void Play(int board[9][9], Sudoku S) {
 	S.Print(S.maybeNumBoard);
 	cout << endl;
 	if (play2(board, S.maybeNumBoard, S) == 0) {
-		cout << "´íÎó";
+		cout << "é”™è¯¯";
 	}
 
 }
@@ -170,7 +170,7 @@ int main() {
 	Sudoku S;
 	int line, row, num;
 
-	//////////////////////////////////////////////µÚÒ»ÖÖÊäÈë·½Ê½(µÚÒ»ĞĞ¸öÊı£¬µÚÒ»ÁĞĞĞ£¬µÚ¶şÁĞÁĞ£¬µÚÈıÁĞÊı)
+	//////////////////////////////////////////////ç¬¬ä¸€ç§è¾“å…¥æ–¹å¼(ç¬¬ä¸€è¡Œä¸ªæ•°ï¼Œç¬¬ä¸€åˆ—è¡Œï¼Œç¬¬äºŒåˆ—åˆ—ï¼Œç¬¬ä¸‰åˆ—æ•°)
 	//25
 	//1 3 8
 	//2 5 3
@@ -197,7 +197,7 @@ int main() {
 	//9 2 2
 	//9 3 9
 	//9 6 5
-	//int n;//¸ø³öµÄ¸öÊı
+	//int n;//ç»™å‡ºçš„ä¸ªæ•°
 	//cin >> n;
 	//for (int i = 0; i < n; i++) {
 	//	cin >> line >> row >> num;
@@ -205,7 +205,7 @@ int main() {
 	//}
 
 
-	///////////////////////////////////////////////µÚ¶şÖÖÊäÈë·½Ê½£¨ptaÆÚÄ©£©
+	///////////////////////////////////////////////ç¬¬äºŒç§è¾“å…¥æ–¹å¼ï¼ˆptaæœŸæœ«ï¼‰
 	//0 6 1 0 3 0 0 2 0
 	//0 5 0 0 0 8 1 0 7
 	//0 0 0 0 0 7 0 3 4
@@ -233,6 +233,6 @@ int main() {
 
 	stop = clock();
 	duration = ((double)(stop - start)) / CLK_TCK;
-	cout << endl << "ºÄÊ±£º" << duration;
+	cout << endl << "è€—æ—¶ï¼š" << duration;
 	return 0;
 }
